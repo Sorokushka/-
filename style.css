@@ -1,0 +1,664 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Nunito", sans-serif;
+    background: #f8fff0;
+    color: #245c31;
+    line-height: 1.5;
+    transition: 0.3s;
+}
+
+body.dark {
+    background: #17251b;
+    color: #f5ffd9;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+    font-family: inherit;
+}
+
+
+.header {
+    background: #fff;
+    padding: 18px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 3px solid #8bc34a;
+}
+
+.dark .header {
+    background: #203524;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.logo {
+    font-family: "Baloo 2", cursive;
+    font-size: 25px;
+    font-weight: 800;
+    color: #e94f87;
+    line-height: 0.8;
+}
+
+.logo span {
+    display: block;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #4d9f38;
+}
+
+.nav {
+    display: flex;
+    gap: 25px;
+}
+
+.nav a {
+    font-weight: 800;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: #e94f87;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.theme-button,
+.cart-button {
+    border: none;
+    background: #dff3b8;
+    border-radius: 30px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-weight: 800;
+}
+
+.theme-button:hover,
+.cart-button:hover {
+    transform: scale(1.05);
+}
+
+.cart-button span {
+    background: #e94f87;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 7px;
+}
+
+
+.hero {
+    background: #50aee8;
+    padding: 70px 0;
+    overflow: hidden;
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+}
+
+.hero-content {
+    background: #fff;
+    padding: 45px;
+    border: 5px solid #8bc34a;
+    border-radius: 35px;
+    transform: rotate(-2deg);
+    box-shadow: 10px 10px 0 #e94f87;
+}
+
+.hero-label {
+    color: #e94f87;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    font-family: "Baloo 2", cursive;
+    font-size: clamp(45px, 6vw, 75px);
+    line-height: 0.95;
+    margin: 20px 0;
+    color: #4d9f38;
+}
+
+.hero h1 span {
+    display: block;
+    color: #e94f87;
+}
+
+.hero-text {
+    font-size: 19px;
+    margin-bottom: 30px;
+}
+
+.main-button {
+    display: inline-block;
+    border: none;
+    background: #e94f87;
+    color: white;
+    padding: 15px 28px;
+    border-radius: 30px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.main-button:hover {
+    background: #4d9f38;
+    transform: translateY(-4px);
+}
+
+.hero-image {
+    position: relative;
+    border: 8px solid white;
+    border-radius: 30px;
+    overflow: hidden;
+    transform: rotate(2deg);
+    box-shadow: 12px 12px 0 #8bc34a;
+}
+
+.hero-image img {
+    display: block;
+    width: 100%;
+    height: 570px;
+    object-fit: cover;
+}
+
+.sticker {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-family: "Baloo 2", cursive;
+    font-weight: 900;
+    text-align: center;
+}
+
+.sticker-one {
+    width: 100px;
+    height: 100px;
+    background: #e94f87;
+    color: white;
+    top: 20px;
+    right: 20px;
+    transform: rotate(12deg);
+}
+
+.sticker-two {
+    width: 90px;
+    height: 90px;
+    background: #eaffc2;
+    font-size: 45px;
+    bottom: 30px;
+    left: 20px;
+}
+
+.sticker-three {
+    width: 100px;
+    height: 100px;
+    background: #fff176;
+    color: #e94f87;
+    bottom: 20px;
+    right: 25px;
+    transform: rotate(-10deg);
+}
+
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title p,
+.section-label {
+    color: #e94f87;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+.section-title h2 {
+    font-family: "Baloo 2", cursive;
+    font-size: 50px;
+    color: #4d9f38;
+}
+
+.section-title span {
+    color: #58715c;
+}
+
+
+.menu {
+    padding: 100px 0;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.product-card {
+    background: white;
+    border: 4px solid #8bc34a;
+    border-radius: 25px;
+    overflow: hidden;
+    transition: 0.4s;
+    box-shadow: 7px 7px 0 #c8e6a0;
+}
+
+.dark .product-card {
+    background: #263d2b;
+}
+
+.product-card:hover {
+    transform: translateY(-10px) rotate(1deg);
+}
+
+.product-image {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    border-radius: 18px;
+}
+
+.green {
+    background: #b9e769;
+}
+
+.pink {
+    background: #ff9fc0;
+}
+
+.yellow {
+    background: #ffe878;
+}
+
+.product-info {
+    padding: 25px;
+}
+
+.product-tag {
+    color: #e94f87;
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.product-info h3 {
+    font-family: "Baloo 2", cursive;
+    font-size: 29px;
+    color: #4d9f38;
+}
+
+.product-info p {
+    color: #58715c;
+    margin: 10px 0 25px;
+}
+
+.product-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.product-bottom strong {
+    color: #e94f87;
+    font-size: 22px;
+}
+
+.buy-button {
+    border: none;
+    background: #4d9f38;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 800;
+}
+
+.buy-button:hover {
+    background: #e94f87;
+}
+
+
+.cart-box {
+    margin-top: 40px;
+    background: #fff176;
+    padding: 20px 25px;
+    border: 3px dashed #e94f87;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    color: #245c31;
+}
+
+.cart-box button {
+    border: none;
+    background: #e94f87;
+    color: white;
+    padding: 9px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+
+
+.slider-section {
+    padding: 100px 0;
+    background: #dff3b8;
+}
+
+.slider {
+    max-width: 850px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 30px;
+    border: 6px solid white;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.slide-content span {
+    font-size: 100px;
+}
+
+.slide h3 {
+    font-family: "Baloo 2", cursive;
+    font-size: 45px;
+    color: #e94f87;
+}
+
+.slide p {
+    font-size: 19px;
+}
+
+.green-slide {
+    background: #b9e769;
+}
+
+.pink-slide {
+    background: #ff9fc0;
+}
+
+.blue-slide {
+    background: #77c9f5;
+}
+
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: white;
+    color: #e94f87;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 15px;
+}
+
+.next {
+    right: 15px;
+}
+
+.dots {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 13px;
+    height: 13px;
+    border: none;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+}
+
+.dot.active {
+    background: #e94f87;
+}
+
+
+
+.about {
+    padding: 100px 0;
+    background: #50aee8;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+}
+
+.about-decoration {
+    min-width: 330px;
+    height: 330px;
+    border-radius: 50%;
+    background: #fff176;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 150px;
+    border: 8px solid white;
+}
+
+.about-content {
+    background: white;
+    padding: 45px;
+    border-radius: 30px;
+    border: 5px solid #e94f87;
+}
+
+.about-content h2 {
+    font-family: "Baloo 2", cursive;
+    font-size: 48px;
+    line-height: 1;
+    color: #4d9f38;
+    margin: 15px 0 25px;
+}
+
+.about-content p:not(.section-label) {
+    color: #58715c;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+
+.form-section {
+    padding: 100px 0;
+}
+
+.contact-form {
+    max-width: 700px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border-radius: 30px;
+    border: 5px solid #8bc34a;
+    box-shadow: 10px 10px 0 #ff9fc0;
+}
+
+.dark .contact-form {
+    background: #263d2b;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    margin-top: 8px;
+    padding: 14px;
+    border: 2px solid #b9e769;
+    border-radius: 15px;
+    outline: none;
+    font-size: 16px;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    border-color: #e94f87;
+}
+
+#formMessage {
+    margin-top: 20px;
+    color: #4d9f38;
+    font-weight: 800;
+}
+
+
+
+.footer {
+    padding: 40px 0;
+    background: #245c31;
+    color: white;
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+
+
+@media (max-width: 900px) {
+
+    .hero-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-image {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-container {
+        flex-direction: column;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .header-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content {
+        padding: 30px;
+    }
+
+    .hero-image img {
+        height: 450px;
+    }
+
+    .about-decoration {
+        min-width: 250px;
+        width: 250px;
+        height: 250px;
+    }
+
+    .contact-form {
+        padding: 25px;
+    }
+}

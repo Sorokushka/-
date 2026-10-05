@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Untitled</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="/style.css">
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Яблочко Beach Кафе</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="container header-container">
+
+        <a href="#home" class="logo">
+            ЯБЛОЧКО
+            <span>BEACH КАФЕ</span>
+        </a>
+
+        <nav class="nav">
+            <a href="#home">Главная</a>
+            <a href="#menu">Меню</a>
+            <a href="#about">О кафе</a>
+            <a href="#form">Контакты</a>
+        </nav>
+
+        <div class="header-actions">
+            <button class="theme-button" id="themeButton">☾</button>
+
+            <button class="cart-button">
+                🛒 <span id="cartCount">0</span>
+            </button>
+        </div>
+
+    </div>
+</header>
+
+
+<main>
+
+    <section class="hero" id="home">
+        <div class="container hero-container">
+
+            <div class="hero-content">
+
+                <div class="hero-label">
+                    ВКУС ЛЕТА 
+                </div>
+
+                <h1>
+                    Яблочное настроение каждый день!
+                </h1>
+
+                <p>
+                    Свежие напитки, нежные десерты и много яблок
+                    в ярком летнем кафе.
+                </p>
+
+                <a href="#menu" class="main-button">
+                    ПОДРОБНЕЕ
+                </a>
+
+            </div>
+
+            <div class="hero-image">
+                <img
+                    src="https://i.pinimg.com/736x/c6/87/85/c68785009001897c205c8e52eec19ec0.jpg"
+                    alt="Яблочное кафе"
+                >
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="menu" id="menu">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Наше меню </h2>
+                <p>Выбирай любимый напиток или десерт</p>
+            </div>
+
+
+            <div class="products">
+
+                <article class="product-card">
+
+                    <div class="product-image">
+                        <img
+                            src="https://i.pinimg.com/736x/7f/e2/6c/7fe26c2d9b5e66680f6c6ee5670fa858.jpg"
+                            alt="Зелёная яблочная газировка"
+                        >
+                    </div>
+
+                    <h3>Зелёная яблочная газировка</h3>
+
+                    <p>
+                        Освежающая газировка с яблочным вкусом,
+                        льдом и свежими яблоками.
+                    </p>
+
+                    <div class="product-bottom">
+                        <span class="price">390 ₽</span>
+
+                        <button
+                            class="buy-button"
+                            data-price="390"
+                            data-name="Зелёная яблочная газировка"
+                        >
+                            В корзину
+                        </button>
+                    </div>
+
+                </article>
+
+
+                <article class="product-card">
+
+                    <div class="product-image">
+                        <img
+                            src="https://i.pinimg.com/736x/1e/73/20/1e73203bbb00d3af214bea2f6603a38a.jpg"
+                            alt="Розовое яблочное желе"
+                        >
+                    </div>
+
+                    <h3>Розовое яблочное желе</h3>
+
+                    <p>
+                        Нежный розовый десерт с яблоком,
+                        сливками и лёгким фруктовым вкусом.
+                    </p>
+
+                    <div class="product-bottom">
+                        <span class="price">450 ₽</span>
+
+                        <button
+                            class="buy-button"
+                            data-price="450"
+                            data-name="Розовое яблочное желе"
+                        >
+                            В корзину
+                        </button>
+                    </div>
+
+                </article>
+
+
+                <article class="product-card">
+
+                    <div class="product-image">
+                        <img
+                            src="https://i.pinimg.com/736x/41/34/c2/4134c222a151f4f10df637c157222b0d.jpg"
+                            alt="Яблочный парфе"
+                        >
+                    </div>
+
+                    <h3>Яблочный парфе</h3>
+
+                    <p>
+                        Сливочный десерт с яблоками,
+                        хрустящей гранолой и свежими фруктами.
+                    </p>
+
+                    <div class="product-bottom">
+                        <span class="price">520 ₽</span>
+
+                        <button
+                            class="buy-button"
+                            data-price="520"
+                            data-name="Яблочный парфе"
+                        >
+                            В корзину
+                        </button>
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <div class="cart-box">
+
+                <div>
+                    В корзине:
+                    <strong id="cartTotalCount">0</strong> товаров
+                </div>
+
+                <div>
+                    Сумма:
+                    <strong id="cartTotal">0 ₽</strong>
+                </div>
+
+                <button class="clear-button" id="clearCart">
+                    Очистить
+                </button>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="slider-section">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Сегодня рекомендуем</h2>
+            </div>
+
+            <div class="slider">
+
+                <div class="slides">
+
+                    <div class="slide">
+                        <h3>Зелёное яблоко </h3>
+                        <p>
+                            Свежий вкус для жаркого летнего дня
+                        </p>
+                    </div>
+
+                    <div class="slide">
+                        <h3>Розовое желе </h3>
+                        <p>
+                            Нежный десерт для хорошего настроения
+                        </p>
+                    </div>
+
+                    <div class="slide">
+                        <h3>Яблочный парфе </h3>
+                        <p>
+                            Сливочный десерт со свежими фруктами
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="slider-controls">
+
+                <button class="slider-button" id="prev">
+                    ←
+                </button>
+
+                <div class="dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+
+                <button class="slider-button" id="next">
+                    →
+                </button>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="about" id="about">
+        <div class="container about-container">
+
+            <div>
+                <h2>О нашем кафе </h2>
+
+                <p>
+                    Яблочко Beach Кафе — это яркое летнее место
+                    с освежающими напитками и фруктовыми десертами.
+                    Здесь можно отдохнуть, попробовать что-нибудь
+                    вкусное и зарядиться хорошим настроением.
+                </p>
+            </div>
+
+            <div class="about-apple">
+                
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="form-section" id="form">
+        <div class="container">
+
+            <div class="contact-form">
+
+                <h2>Расскажи о себе </h2>
+
+                <form id="contactForm">
+
+                    <div class="form-group">
+                        <label for="name">
+                            1. Как тебя зовут?
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Твоё имя"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="phone">
+                            2. Номер телефона
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="+7 (___) ___-__-__"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="drink">
+                            3. Какой напиток тебе нравится?
+                        </label>
+
+                        <select id="drink" name="drink" required>
+                            <option value="">Выбери вариант</option>
+                            <option value="soda">
+                                Яблочная газировка
+                            </option>
+                            <option value="jelly">
+                                Яблочное желе
+                            </option>
+                            <option value="parfait">
+                                Яблочный парфе
+                            </option>
+                        </select>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="date">
+                            4. Когда планируешь прийти?
+                        </label>
+
+                        <input
+                            type="date"
+                            id="date"
+                            name="date"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="message">
+                            5. Что бы ты хотел(а) попробовать?
+                        </label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            placeholder="Напиши здесь..."
+                            required
+                        ></textarea>
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="form-button"
+                    >
+                        ОТПРАВИТЬ
+                    </button>
+
+                    <div
+                        class="form-message"
+                        id="formMessage"
+                    ></div>
+
+                </form>
+
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="logo">
+            ЯБЛОЧКО
+            <span>BEACH КАФЕ</span>
+        </div>
+
+        <p>
+            Свежесть, сладость и летнее настроение 
+        </p>
+
+        <p>
+            © пересдача сорокина
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
+    <script src="/script.js"></script>
+  </body>
+
+</html>
